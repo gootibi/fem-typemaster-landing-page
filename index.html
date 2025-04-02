@@ -47,12 +47,46 @@
         </p>
       </div>
 
-      <img src="assets/desktop/image-keyboard.jpg" width="1080" height="960" alt="Mechanical keyboard"
-        class="hero-image">
+      <picture class="hero-image">
+        <source media="(width >= 75em)" srcset="/assets/desktop/image-keyboard.jpg" />
+        <source media="(width >= 43.75em)" srcset="/assets/tablet/image-keyboard.jpg" />
+        <img src="/assets/mobile/image-keyboard.jpg" alt="mechanical keyboard" width="1080" height="960"
+          class="hero-image" />
+      </picture>
+
       <div class="gray-block"></div>
 
     </section>
-    
+
+    <!-- DETAILS SECTION -->
+    <section class="grid-main details">
+      <div class="gray-block"></div>
+
+      <picture class="details-image">
+        <source media="(width >= 75em)" srcset="/assets/desktop/image-phone-and-keyboard.jpg" />
+        <source media="(width >= 43.75em)" srcset="/assets/tablet/image-phone-and-keyboard.jpg" />
+        <img src="/assets/mobile/image-phone-and-keyboard.jpg" alt="phone and keyboard" width="744" height="662"
+          class="hero-image" />
+      </picture>
+
+      <picture class="details-image">
+        <source media="(width >= 75em)" srcset="/assets/desktop/image-glass-and-keyboard.jpg" />
+        <source media="(width >= 43.75em)" srcset="/assets/tablet/image-glass-and-keyboard.jpg" />
+        <img src="/assets/mobile/image-glass-and-keyboard.jpg" alt="mechanical keyboard" width="440" height="386"
+          class="hero-image" />
+      </picture>
+
+      <div class="details-text">
+        <h2 class="headline">Mechanical wireless keyboard</h2>
+        <p class="description small">
+          The Typemaster keyboard boasts top-notch build and practical design.
+          It offers a wide variety of switches and keycaps, along with
+          reliable wireless connectivity.
+        </p>
+      </div>
+
+    </section>
+
   </main>
 
   <!-- FOOTER -->
@@ -60,12 +94,6 @@
 
 
   <!-- 
-
-  Mechanical wireless keyboard
-
-  The Typemaster keyboard boasts top-notch build and practical design.
-  It offers a wide variety of switches and keycaps, along with
-  reliable wireless connectivity.
 
   Highly compatible
 
