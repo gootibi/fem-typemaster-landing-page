@@ -54,7 +54,6 @@ body {
   padding-block: 24px;
   min-height: 100vh;
   min-width: 360px;
-  margin-bottom: 60vh;
 }
 
 /* Heading elements */
@@ -77,6 +76,10 @@ h1 {
 
 h2 {
   font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 /* Paragraph */
@@ -203,6 +206,7 @@ button:hover {
 }
 
 /* Hero Section */
+
 .hero {
   padding-block: var(--space-med) var(--space-sm);
   row-gap: var(--space-med);
@@ -286,6 +290,51 @@ button:hover {
   gap: 32px;
 }
 
+/* Features Section */
+
+.features {
+  row-gap: var(--space-med);
+  padding-block-start: var(--space-lg);
+}
+
+.feature {
+  grid-column: 2 / span 3;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.feature .icon {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  margin-block-end: 48px;
+  border-radius: 16px;
+  background-color: var(--orange);
+  display: grid;
+  place-items: center;
+}
+
+.feature .icon img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.feature h3 {
+  margin-block-end: 24px;
+}
+
+/* Footer Section */
+
+footer {
+  text-align: center;
+  padding-block-start: var(--space-lg);
+}
+
+footer > p {
+  max-width: none;
+}
+
 /* Media queries */
 
 /* 700px - Tablet */
@@ -293,7 +342,7 @@ button:hover {
   :root {
     --space-sm: 40px;
     --space-med: 72px;
-    --space-lg: 120px;
+    --space-lg: 140px;
   }
 
   body {
@@ -341,10 +390,34 @@ button:hover {
     align-items: center;
     text-align: left;
   }
+
+  /* Features Section Tablet */
+
+  .features {
+    row-gap: var(--space-med);
+  }
+
+  .feature {
+    justify-items: start;
+    text-align: left;
+    /* max-width: 17.5625rem; */
+  }
+
+  .feature:nth-child(even) {
+    grid-column: 5 / span 3;
+  }
+
+  .feature h3 {
+    max-width: 14ch;
+  }
 }
 
 /* 1200px - Desctop */
 @media (width >= 75em) {
+  :root {
+    --space-lg: 160px;
+  }
+
   body {
     padding-block: 55px;
   }
@@ -385,7 +458,7 @@ button:hover {
     align-self: start;
   }
 
-  /* Details Section Tablet */
+  /* Details Section Desctop */
 
   .details .gray-block {
     grid-column: 1 / 2;
@@ -404,5 +477,16 @@ button:hover {
   .details-text {
     grid-column: 11 / -2;
     flex-direction: column;
+  }
+
+  /* Features Section Desctop */
+
+  .feature,
+  .feature:nth-child(even) {
+    grid-column-start: auto;
+  }
+
+  .feature:nth-child(1) {
+    grid-column-start: 2;
   }
 }
